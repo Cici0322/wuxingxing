@@ -1,7 +1,7 @@
 define(["jquery"],function($){
 	;
 	(function($){
-		function Carousel({imgs, width, height, type, duration, isAutoPlay}) {
+		function Carousel({imgs, width, height, type, duration, cancelAutoPlay}) {
 			this.imgs = imgs;
 			this.len = imgs.length;
 			this.width = width;
@@ -16,8 +16,8 @@ define(["jquery"],function($){
 			this.next = null;
 			this.currentIndex = 0; // 当前显示图片的索引
 			this.nextIndex = 1; // 即将显示图片的索引
-			this.isAutoPlay = isAutoPlay || true; // 是否自动轮播
-			
+			this.cancelAutoPlay = cancelAutoPlay; // 是否自动轮播
+			//this.cancelMove = cancelMove
 		}
 	
 		Carousel.prototype = {
@@ -30,26 +30,47 @@ define(["jquery"],function($){
 				var html = 
 					`<div class="xm_carousel_container">
 						<ul class="imgs">`;
+				
 				// 串连轮播的图片布局
 				for (var i = 0; i < this.len; i++){
-					html += `<li><a href="${this.imgs[i].href}"><img src="${this.imgs[i].src}"></a></li>`;
+					//如果传入的imgs是一个数组，（多张图片轮播）
+					if(this.imgs[0] instanceof Array){
+						html += `<li>`;
+							$(this.imgs[i]).each(function(i,e){
+								html += `<a href="${e.href}"><img src="${e.src}"></a>`;
+							})
+						html += `</li>`;
+					}else{//(一张图片轮播)
+						html += `<li><a href="${this.imgs[i].href}"><img src="${this.imgs[i].src}"></a></li>`;
+					}
 				}
 	
 				html +=	`</ul>
 						<div class="pages"></div>
 						<div class="prev">&lt;</div>
 						<div class="next">&gt;</div>
-					</div>`;
+					</div>`	
+				
 				// 页面渲染HTML
 				$(container).html(html);
-	
+				
 				// 设置各元素CSS样式
 				this.container = $(".xm_carousel_container", container).css({
 					width: this.width,
 					height: this.height,
-					overflow: "hidden"
 				});
-				// ul样式设置
+				
+				/*
+				 * 当轮播方式为 slide 时，图片图片排列方式 ：排列在一行，所以需要容器container  -  溢出隐藏
+				 * fade 时，图片排列方式 ：重叠
+				 */
+				if(this.type === "slide"){
+					this.container.css({
+						overflow: "hidden",
+					})
+				}
+				
+				// ul（imgs）样式设置
 				this.ul = $(".imgs", container).css({
 					width: (this.type === "fade" ? this.width : this.width * this.len),
 					height: this.height,
@@ -86,8 +107,9 @@ define(["jquery"],function($){
 				this.next = $(".next", container);
 	
 				// 判断，调用自动轮播方法
-				if (this.isAutoPlay)
+				if (!this.cancelAutoPlay)
 					this.autoPlay();
+				
 				// 注册事件监听
 				this.registerEventListener();
 			},
@@ -152,9 +174,12 @@ define(["jquery"],function($){
 					clearInterval(this.timer);
 				}, () => {
 					// mouseleave
-					this.timer = setInterval(()=>{
-						this.move();
-					}, this.duration)
+					if(!this.cancelAutoPlay){
+						this.timer = setInterval(()=>{
+							this.move();
+						}, this.duration)	
+					}
+					
 				});
 				// 小圆点移入
 				var that = this;

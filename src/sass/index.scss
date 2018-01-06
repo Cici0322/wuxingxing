@@ -60,62 +60,116 @@
 
     }
 }
-.br{
-    width: 1263px;
-    height: 154px;
-//  background: red;
+.lunbotu{
+    width: 1150px;
     margin: 0 auto;
-    overflow: hidden;
-    p{
-        width: 305px;
-        height: 35px;
-        text-align: center;
-        border: 1px solid black;
-        line-height: 35px;
-        margin: 0 auto;
-        margin-top: 80px;
-    }
-}
-.lunb1{
-    width: 1263px;
-    height: 559px;
-    margin: 0 auto;
-    .lunbg{
-        width: 1153px;
-        height: 559px;
-        background: cyan;
-        margin-left: 57px;
-        overflow: hidden;
-        .luntu{
-            width: 982px;
-            height: 434px;
-            background: red;
-            margin-left: 86px;
-            margin-top: 87px;
-            .tu1{
-                width: 322px;
-                height: 434px;
-                background: yellow;
-                float: left;
-            }
-            .tu1:nth-child(2){
-                margin-left: 8px;
-                margin-right: 8px;
-            }
+    .youxuan{
+        width:1150px;
+        height:154px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            width:300px;
+            height: 35px;
+            border:1px solid;
+            text-align: center;
+            line-height: 35px;   
         }
     }
-}
-.slun{
-    width: 1263px;
-    height: 181px;
-//  background: red;
-    margin: 0 auto;
-    margin-top: 10px;
-    .slun-s{
-        width: 1153px;
-        height: 181px;
-        background: yellowgreen;
+    //轮播多张图片
+    .luntu-b{
+        width:1150px;
+        height:600px;
+        background: #8ae6e0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .xm_carousel_container {
+            position: relative;
+           
+            .imgs{
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    img{
+                        width:320px;
+                        height:430px;
+                    }
+                }
+            }
+            .prev, .next{
+                width:60px;
+                height: 60px;
+                color:white;
+                text-align: center;
+                line-height: 60px;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                margin:auto;
+                font-size: 35px;
+            }
+            .prev{
+                
+                left:0;
+                margin-left:-70px;
+            }
+            .next{
+               
+                right:0px;
+                margin-right:-70px;
+            }
+        }
+        
+    }
+    //轮播图标
+    .luntu-s{
+        width:1150px;
+        height:200px;
         margin: 0 auto;
+        background: url(../images/bg9.png) no-repeat 1016px 16px;
+        position: relative;
+        
+         .xm_carousel_container {
+            position: relative;
+            padding-top: 5px;
+            .imgs{
+                li{
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    align-items: space-around;
+                    img{
+                        width:185px;
+                        height:86px;
+                    }
+                    
+                }
+            }
+            .prev, .next{
+                width: 60px;
+                height: 60px;
+                color: black;
+                text-align: center;
+                line-height: 60px;
+                position: absolute;
+                margin:auto;
+                font-size: 35px;
+            }
+            .prev{
+                right:-94px;
+                top:-5px;
+                
+            }
+            .next{
+                top: 37px;
+                right: -167px;
+                
+            }
+        }
     }
 }
 .meizhuang{
@@ -195,6 +249,16 @@
             opacity: 0.7;
         }
     }
+}
+.br{
+    width: 305px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid black;
+    line-height: 35px;
+    margin-top: 80px;
+    margin-left: 480px;
+    margin-bottom: 60px;
 }
 .shoufq{
     width: 1263px;
