@@ -1,5 +1,231 @@
-.main {
-	width: 1024px;
-	height:400px;
-	background: #f00;
+.banner{
+    width: 1263px;
+    height: 461px;
+//  background: red;
+    margin: 0 auto;
+    overflow: hidden;
+    .bann{
+        width: 1153px;
+        height: 451px;
+//      background: cyan;
+        margin: 0 auto;
+        margin-top: 10px;
+        .xm_carousel_container {
+            position: relative;
+            .imgs{
+                list-style: none;
+            };
+            .pages{
+                height: 25px;
+                position: absolute;
+                bottom:17px;
+                left:50%;
+                margin-left: -55px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background: rgba(0,0,0,0.1);
+                
+                i{
+                    width:10px;
+                    height: 10px;
+                    border-radius: 5px;
+                    background: #DCDCDC;
+                    display: inline-block;
+                    margin:6px;
+                    &.current{
+                        background-color: orange;
+                    } 
+                }
+            }
+            .prev, .next{
+                width:60px;
+                height: 60px;
+                background: white;
+                opacity: 0.5;
+                color:#7c4c4e;
+                text-align: center;
+                line-height: 60px;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                margin:auto;
+                font-size: 35px;
+            }
+            .next{
+                right:0;
+            }
+        }
+
+    }
+}
+.br{
+    width: 1263px;
+    height: 154px;
+//  background: red;
+    margin: 0 auto;
+    overflow: hidden;
+    p{
+        width: 305px;
+        height: 35px;
+        text-align: center;
+        border: 1px solid black;
+        line-height: 35px;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+}
+.lunb1{
+    width: 1263px;
+    height: 559px;
+    margin: 0 auto;
+    .lunbg{
+        width: 1153px;
+        height: 559px;
+        background: cyan;
+        margin-left: 57px;
+        overflow: hidden;
+        .luntu{
+            width: 982px;
+            height: 434px;
+            background: red;
+            margin-left: 86px;
+            margin-top: 87px;
+            .tu1{
+                width: 322px;
+                height: 434px;
+                background: yellow;
+                float: left;
+            }
+            .tu1:nth-child(2){
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+.slun{
+    width: 1263px;
+    height: 181px;
+//  background: red;
+    margin: 0 auto;
+    margin-top: 10px;
+    .slun-s{
+        width: 1153px;
+        height: 181px;
+        background: yellowgreen;
+        margin: 0 auto;
+    }
+}
+.meizhuang{
+    width: 1263px;
+    height: 153px;
+    margin: 0 auto;
+//  background: red;
+    overflow: hidden;
+    p{
+        width: 305px;
+        height: 35px;
+        text-align: center;
+        border: 1px solid black;
+        line-height: 35px;
+        margin-top: 80px;
+        margin-left: 480px;
+        float: left;
+    }
+    ul{
+        float: right;
+        margin-top: 90px;
+        li{
+            float: left;
+            list-style: none;
+            width: 80px;
+            border-right: 1px solid;
+            text-align: center;
+        }
+        li:nth-child(5){
+            border-right: none;
+        }
+        a{
+            text-decoration: none;
+            color: #333333;
+            font-size: 14px;
+        }
+    }
+}
+.meitu{
+    width: 1263px;
+    height: 504px;
+//  background: red;
+    margin: 0 auto;
+    .meitu-t{
+        width: 1153px;
+        height: 504px;
+//      background: darkcyan;
+        margin: 0 auto;
+        overflow: hidden;
+        .meitu1{
+            width: 185px;
+            height: 504px;
+            background: red;
+            float: left;
+        }
+        .meitu1:hover{
+            opacity: 0.7;
+        }
+        .meitu2{
+            width: 377px;
+            height: 504px;
+            background: yellow;
+            float: left;
+            margin-left: 9px;
+        }
+        .meitu2:hover{
+            opacity: 0.7;
+        }
+        .meitu-s{
+            width: 185px;
+            height: 248px;
+            float: left;
+            margin-left: 9px;
+            margin-bottom: 8px;
+        }
+        .meitu-s:hover{
+            opacity: 0.7;
+        }
+    }
+}
+.shoufq{
+    width: 1263px;
+    height: 401px;
+//  background: red;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    .shoufq-t{
+        width: 1153px;
+        height: 400px;
+        margin: 0 auto;
+//      background: yellow;
+        ul{
+            width: 1153px;
+            height: 400px;
+            overflow: hidden;
+            li{
+                width: 225px;
+                list-style: none;
+                float: left;
+                transition: all 2s;
+//              overflow: hidden;
+            }
+        }
+        ul:hover li{
+            width: 130px;
+            opacity: 0.5;
+        }
+        ul li:hover{
+            width: 630px;
+            opacity: 0.9;
+        }
+    }
 }

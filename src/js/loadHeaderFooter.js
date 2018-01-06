@@ -13,9 +13,17 @@ define(["jquery", "cookie"], function($){
 					html += "<div>"+ curr[0] +"</div>"
 				});
 
-				$(".search .info").html(html);
+				$(".search .info").html(html).show();
+				//输入框没内容。隐藏
+				if(!$(".search .word").val()){
+					$(".search .info").hide();
+				}
 			});
 		});
+		//失去焦点，隐藏
+		$(".search .word").blur(function(){
+			$(".search .info").hide();
+		})
 	}).done(function(){
 		// 如果有用户登录成功，则显示欢迎信息
 		var user = $.cookie("loginUser");
