@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" href="/../css/register.css">
+	<link rel="stylesheet" href="/../css/header.css" />
+	<script src="/lib/requirejs/require.js" data-main="../js/register"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="login-head-box">
+		<div class="login-head">
+			<div class="logo-l">
+				<a href="../../index.html"><img src="../images/8.jpg"/></a>
+			</div>
+			<div class="head-ul">
+				<ul>
+					<li>
+						<span class="hi">Hi~</span>
+						[<a href="/html/login.html">请登录</a>]
+						[<a href="/html/register.html">免费注册</a>]
+					</li>
+					<li><a href="#">MY有货</a></li>
+					<li><a href="#">订单中心</a></li>
+					<li><a href="#">客户服务</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="warning-box">
+		<div class="warning">
+			<p>!为保障账户安全与正常使用，依《网络安全法》相关要求，会员账号需绑定手机号。<span>如你尚未绑定手机号，请尽快完成，</span>感谢你对Yoho!Buy有货的理解与支持！</p>
+		</div>
+	</div>
+	<div class="dengl-box">
+		<div class="dengl">
+			<div class="dengl-left">
+				<img src="/images/11.jpg"/>
+			</div>
+			<div class="dengl-right">
+				<form action="#">
+						<select id="provice"></select>
+						<div class="user">
+							<span></span>
+							<input type="text" id="tele" placeholder="请输入手机号"/>
+						</div>
+						<div class="duanxin">
+							<input type="text" id="yanzheng" placeholder="短信验证码"/>
+							<p><a href="#">获取短信验证码</a></p>
+						</div>
+						<div class="in">
+							<input type="password" id="psw" placeholder="设置密码" maxlength="20"/>
+							<span>低</span>
+							<span>中</span>
+							<span>高</span>
+						</div>
+						<input type="text" id="tel" placeholder="潮流口令（非必填）"/>
+						<label>
+							<input type="checkbox" checked="checked"/>我已阅读并同意遵守<a href="#">  YOHO!BUY有货服务条款</a>
+						</label>
+						<input type="submit" value="立  即  注  册" id="btn"/>
+						<div class="last">我已注册 YOHO!BUY 有货账号  <a href="login.html">快 速 登 录</a></div>
+					</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+
+</body>
+</html>

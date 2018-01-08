@@ -2,13 +2,66 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>首页</title>
+	<title>用户登录</title>
 	<link rel="stylesheet" href="/../css/login.css">
 	<link rel="stylesheet" href="/../css/header.css" />
-	<script src="lib/requirejs/require.js" data-main="js/login"></script>
+	<script src="/lib/requirejs/require.js" data-main="../js/login"></script>
 </head>
 <body>
 	<div class="header"></div>
+	<div class="login-head-box">
+		<div class="login-head">
+			<div class="logo-l">
+				<a href="../../index.html"><img src="../images/8.jpg"/></a>
+			</div>
+			<div class="head-ul">
+				<ul>
+					<li>
+						<span class="hi">Hi~</span>
+						[<a href="/html/login.html">请登录</a>]
+						[<a href="/html/register.html">免费注册</a>]
+					</li>
+					<li><a href="#">MY有货</a></li>
+					<li><a href="#">订单中心</a></li>
+					<li><a href="#">客户服务</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="warning-box">
+		<div class="warning">
+			<p>!为保障账户安全与正常使用，依《网络安全法》相关要求，会员账号需绑定手机号。<span>如你尚未绑定手机号，请尽快完成，</span>感谢你对Yoho!Buy有货的理解与支持！</p>
+		</div>
+	</div>
+	<div class="dengl-box">
+		<div class="dengl">
+			<div class="dengl-left">
+				<img src="/images/11.jpg"/>
+			</div>
+			<div class="dengl-right">
+				<h2>会员登录</h2>
+				<p>普通登录</p>
+				<div class="phone">
+					<input type="text" id="shouji" placeholder="邮箱/手机号"/>
+				</div>
+				<div class="mima">
+					<input type="password" id="mm" placeholder="密码"/>
+				</div>
+				<div class="sub">
+					<input type="submit" id="onlogin" value="登       录"/>
+				</div>
+				<label>
+					<input type="checkbox" checked="checked"/><span>记住登录状态</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><span>忘记密码？|</span></a><a href="/html/register.html" id="re">快速注册</a>
+				</label>
+				<div class="font">
+					<a href="#"><img src="/images/weixin.jpg"/></a>
+					<a href="#"><img src="/images/QQ.jpg"/></a>
+					<a href="#"><img src="/images/xinlang.jpg"/></a>
+					<a href="#"><img src="/images/zhifubao.jpg"/></a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="footer"></div>
 
 </body>

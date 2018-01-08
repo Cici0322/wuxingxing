@@ -1,5 +1,5 @@
 .banner{
-    width: 1263px;
+    width: 100%;
     height: 461px;
 //  background: red;
     margin: 0 auto;
@@ -60,119 +60,126 @@
 
     }
 }
-.lunbotu{
-    width: 1150px;
-    margin: 0 auto;
-    .youxuan{
-        width:1150px;
-        height:154px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p{
-            width:300px;
-            height: 35px;
-            border:1px solid;
-            text-align: center;
-            line-height: 35px;   
+.lunbox{
+    width: 100%;
+    height: 954px;
+    .lunbotu{
+        width: 1150px;
+        margin: 0 auto;
+        .youxuan{
+            width:1150px;
+            height:154px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                width:300px;
+                height: 35px;
+                border:1px solid;
+                text-align: center;
+                line-height: 35px;   
+            }
         }
-    }
-    //轮播多张图片
-    .luntu-b{
-        width:1150px;
-        height:600px;
-        background: #8ae6e0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        .xm_carousel_container {
-            position: relative;
-           
-            .imgs{
-                li{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    img{
-                        width:320px;
-                        height:430px;
+        //轮播多张图片
+        .luntu-b{
+            width:1150px;
+            height:600px;
+            background: #8ae6e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .xm_carousel_container {
+                position: relative;
+               
+                .imgs{
+                    li{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        img{
+                            width:320px;
+                            height:430px;
+                        }
                     }
                 }
+                .prev, .next{
+                    width:60px;
+                    height: 60px;
+                    color:white;
+                    text-align: center;
+                    line-height: 60px;
+                    position: absolute;
+                    top:0;
+                    bottom: 0;
+                    margin:auto;
+                    font-size: 35px;
+                }
+                .prev{
+                    
+                    left:0;
+                    margin-left:-70px;
+                }
+                .next{
+                   
+                    right:0px;
+                    margin-right:-70px;
+                }
             }
-            .prev, .next{
-                width:60px;
-                height: 60px;
-                color:white;
-                text-align: center;
-                line-height: 60px;
-                position: absolute;
-                top:0;
-                bottom: 0;
-                margin:auto;
-                font-size: 35px;
-            }
-            .prev{
-                
-                left:0;
-                margin-left:-70px;
-            }
-            .next{
-               
-                right:0px;
-                margin-right:-70px;
-            }
+            
         }
-        
-    }
-    //轮播图标
-    .luntu-s{
-        width:1150px;
-        height:200px;
-        margin: 0 auto;
-        background: url(../images/bg9.png) no-repeat 1016px 16px;
-        position: relative;
-        
-         .xm_carousel_container {
+        //轮播图标
+        .luntu-s{
+            width:1150px;
+            height:200px;
+            margin: 0 auto;
+            background: url(../images/bg9.png) no-repeat 1016px 16px;
             position: relative;
-            padding-top: 5px;
-            .imgs{
-                li{
-                    display: flex;
-                    justify-content: space-around;
-                    flex-wrap: wrap;
-                    align-items: space-around;
-                    img{
-                        width:185px;
-                        height:86px;
+            
+             .xm_carousel_container {
+                position: relative;
+                padding-top: 5px;
+                .imgs{
+                    li{
+                        display: flex;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        align-items: space-around;
+                        img{
+                            width:185px;
+                            height:86px;
+                        }
+                        
                     }
+                }
+                .prev, .next{
+                    width: 60px;
+                    height: 60px;
+                    color: black;
+                    text-align: center;
+                    line-height: 60px;
+                    position: absolute;
+                    margin:auto;
+                    font-size: 35px;
+                }
+                .prev{
+                    right:-94px;
+                    top:-5px;
                     
                 }
-            }
-            .prev, .next{
-                width: 60px;
-                height: 60px;
-                color: black;
-                text-align: center;
-                line-height: 60px;
-                position: absolute;
-                margin:auto;
-                font-size: 35px;
-            }
-            .prev{
-                right:-94px;
-                top:-5px;
-                
-            }
-            .next{
-                top: 37px;
-                right: -167px;
-                
+                .next{
+                    top: 37px;
+                    right: -167px;
+                    
+                }
             }
         }
     }
 }
-.meizhuang{
+.meizhuang-box{
+    width: 100%;
+    height: 153px;
+    .meizhuang{
     width: 1263px;
     height: 153px;
     margin: 0 auto;
@@ -208,7 +215,11 @@
         }
     }
 }
-.meitu{
+}
+.meitu-box{
+    width: 100%;
+    height: 504px;
+    .meitu{
     width: 1263px;
     height: 504px;
 //  background: red;
@@ -250,7 +261,12 @@
         }
     }
 }
-.br{
+}
+.br-box{
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    .br{
     width: 305px;
     height: 35px;
     text-align: center;
@@ -260,12 +276,17 @@
     margin-left: 480px;
     margin-bottom: 60px;
 }
-.shoufq{
+}
+.shoufq-box{
+    width: 100%;
+    height:401px;
+    margin-bottom: 50px;
+    .shoufq{
     width: 1263px;
     height: 401px;
 //  background: red;
     margin: 0 auto;
-    margin-bottom: 50px;
+    
     .shoufq-t{
         width: 1153px;
         height: 400px;
@@ -293,3 +314,5 @@
         }
     }
 }
+}
+

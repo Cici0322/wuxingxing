@@ -1,5 +1,8 @@
 *{margin: 0;padding: 0;}
 .header{
+    width: 100%;
+    height: 166px;
+    .header-box{
     width: 1263px;
     height: 32px;
     background: #f4f4f4;
@@ -156,12 +159,17 @@
         }
     }
 }
-.footer-top{
+}    
+.footer{
+    width: 100%;
+    height: 322px;
+       .footer-top{
     width: 1263px;
     height: 66px;
     background: black;
     margin: 0 auto;
     border-bottom: 1px solid #8E8E8E;
+    overflow: hidden;
     .top-left{
         width: 523px;
         height: 66px;
@@ -313,3 +321,5 @@
        }
    }
 }
+}
+
