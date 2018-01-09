@@ -1,0 +1,84 @@
+.detail-head-box{
+    width: 100%;
+    height: 47px;
+    .detail-head{
+    width: 1263px;
+    height: 47px;
+    margin: 0 auto;
+     img{
+         width: 1263px;
+         height: 47px;
+     }
+   }
+}
+.detail-box{
+    width: 100%;
+    height: 573px;
+    margin-top: 50px;
+    .detail{
+        width: 1263px;
+        height: 573px;
+        margin: 0 auto;
+        .detail-s{
+            width: 1160px;
+            height:573px;
+            margin-left: 50px;
+//          background: red;
+            .detail-img-big{
+                width: 420px;
+                height: 560px;
+                float: left;
+//              background: yellow;
+            }
+            .detail-img-s{
+                width: 78px;
+                height: 101px;
+                margin-left: 10px;
+//              background: black;
+                float: left;
+                border: 1px solid;
+                img{
+                    margin-left: 2px;
+                    margin-top: 1px;
+                }
+            }
+            .detail-wenzi{
+                width: 589px;
+                height: 573px;
+//              background: red;
+                float: left;
+                margin-left: 60px;
+                .jiage{
+                    width: 589px;
+                    height: 107px;
+                    border: 1px solid #dfdfdf;
+                    border-right: none;
+                    border-left: none;
+                    b{
+                        display: block;
+                        margin-top: 8px;
+                        margin-left: 10px;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: red;
+                        margin-bottom: 5px;
+                        margin-left: 60px;
+                    }
+                }
+                .yans{
+                    width: 587px;
+                    height: 152px;
+                    border: 1px solid #dfdfdf;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    .yanse{
+                        
+                    }
+                }
+            }
+        }
+    }
+}

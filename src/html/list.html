@@ -3,22 +3,84 @@
 <head>
 	<meta charset="UTF-8">
 	<title>列表</title>
+	<link rel="stylesheet" href="/../css/list.css" />
+	<link rel="stylesheet" href="/../css/header.css" />
 	<script src="/lib/requirejs/require.js" data-main="/js/list"></script>
 </head>
 <body>
 	<div class="header"></div>
-
-	<div class="main">
-		
+	<div class="list-head-box">
+		<div class="list-head">
+			<div class="dianpu">
+				<p><a href="#">店铺首页</a></p>
+				<p><a href="#">店铺介绍</a></p>
+				<span><a href="#"><img src="/images/xin.jpg"/></a></span>
+				<span><a href="#"><img src="/images/erweima.jpg"/></a></span>
+			</div>
+		</div>
 	</div>
-
+	<div class="shaixuan-box">
+		<div class="shaixuan">
+			<div class="shai-left">
+				<b>全部品类</b><br />
+				<b>数码3C</b>
+				&nbsp;
+				<hr />
+				<img src="/images/shou.jpg"/>
+			</div>
+			<div class="shai-right">
+				<div class="xingbie">
+					<b>性别：</b><p>BOYS</p><p>GIRS</p>
+				</div>
+				<div class="jiage">
+					<b>价格：</b><p>￥0-349</p><p>￥350-599</p><p>￥599以上</p>
+				</div>
+				<div class="yanse">
+					<b>颜色：</b><i style="background: #ee0000;"></i><p>红色</p>
+							   <i style="background: orange;"></i><p>橙色</p>
+							   <i style="background: white;"></i><p>白色</p>
+							   <i style="background: black;"></i><p>黑色</p>
+							   <i style="background: #f2f2f2;"></i><p>银色</p>
+							   <i style="background: #ffd83d;"></i><p>金色</p>
+							   <i style="background: blue;"></i><p>蓝色</p>
+							   <i style="background: #710098;"></i><p>紫色</p>
+							   <i style="background: yellow;"></i><p>黄色</p>
+				</div>
+				<div class="gaoji">
+					<b>高级选项：</b><p>风格</p>
+				</div>
+				<div class="moren">
+					<b>默认：</b><p>人气</p><p>新品</p><p>价格</p><p>折扣</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="list-box">
+		<div class="list">
+			<div class="list-box-s">
+				
+			</div>
+		</div>
+	</div>
+	<hr />
+	<p class="miaosu">
+		<span>Audiopark</span>
+		 奥迪派（Audiopark）的创办人兼设计总监林炜诗(SandyWSLam)，属海归派一代，曾於天主教学校接受教育，
+		 大学毕业後在传媒界任职，後来到英国和德国旅居三年，修读古典文化，深受艺术丶东丶西方文化和宗教影响。
+		 在一次机缘巧合下，Sandy接触到耳机行业，从此一头栽进广阔的耳机世界。在钻研耳机技术的过程中，
+		 Sandy获得美国音响界的活字典EdWoodard丶高级音响界之父卡达声，以及艺术达人VickieBarber-Ellis的赞赏并给予精心的指导，同时她把... 
+	</p>
 	<script type="text/html" id="list_template">
 		{{each products as product}}
-		<div>
+		<div class="list-box1">
+			<div class="id" style="display:none">{{product.id}}</div>		
+			<a href="detail.html"><img src="{{product.src}}" alt="" style="display:block" class="list-img"/></a>
 			<div class="title">{{product.title}}</div>
-			<div class="price">{{product.price}}</div>
-			<div class="add">加入购物车</div>
+			<div class="price">¥{{product.price}}</div>
+			<!--<div class="add">加入购物车</div>-->
+		
 		</div>
+			
 		{{/each}}
 	</script>
 

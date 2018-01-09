@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>用户注册</title>
+	<title>新用户注册</title>
 	<link rel="stylesheet" href="/../css/register.css">
 	<link rel="stylesheet" href="/../css/header.css" />
 	<script src="/lib/requirejs/require.js" data-main="../js/register"></script>
@@ -39,21 +39,24 @@
 				<img src="/images/11.jpg"/>
 			</div>
 			<div class="dengl-right">
-				<form action="#">
-						<select id="provice"></select>
+				<form action="/index.html">
 						<div class="user">
-							<span></span>
 							<input type="text" id="tele" placeholder="请输入手机号"/>
 						</div>
 						<div class="duanxin">
-							<input type="text" id="yanzheng" placeholder="短信验证码"/>
-							<p><a href="#">获取短信验证码</a></p>
+							<input type="text" id="yanzheng" placeholder="验证码"/>
+							<img src="" id="img"/>
+							<span id="valid"></span>
 						</div>
 						<div class="in">
 							<input type="password" id="psw" placeholder="设置密码" maxlength="20"/>
 							<span>低</span>
 							<span>中</span>
 							<span>高</span>
+							<div id="info">
+								<p><i class="first"></i>密码只支持6—20位字符</p>
+								<p><i></i>由字母、数字组合，可以包含特殊符号</p>
+							</div>
 						</div>
 						<input type="text" id="tel" placeholder="潮流口令（非必填）"/>
 						<label>

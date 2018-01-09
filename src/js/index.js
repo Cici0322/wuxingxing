@@ -25,7 +25,7 @@ require(["config"], function(){
 				width:1000,
 				height:	450,
 				type:"fade",
-				duration:3000,
+				duration:2500,
 			});
 
 			
