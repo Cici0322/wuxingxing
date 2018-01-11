@@ -26,9 +26,10 @@ define(["jquery", "cookie"], function($){
 		})
 	}).done(function(){
 		// 如果有用户登录成功，则显示欢迎信息
-		var user = $.cookie("loginUser");
+		var user = $.cookie("_usertel");
+		console.log($.cookie("_usertel"))
 		if (user)
-			$(".login_reg").html("欢迎你：<a href='personal.html'>"+ user +"</a>")
+			$("#logina").html("欢迎你：<a href='personal.html'>"+ user +"</a>")
 	});
 
 	// 将 footer.html 加载显示到 div.footer 中

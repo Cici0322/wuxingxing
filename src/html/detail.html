@@ -5,6 +5,8 @@
 	<title>商品详情</title>
 	<link rel="stylesheet" href="/../css/detail.css" />
 	<link rel="stylesheet" href="/../css/header.css" />
+	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="/lib/jquery_plugins/jquery.elevateZoom-3.0.8.min.js"></script>
 	<script src="/lib/requirejs/require.js" data-main="/js/detail"></script>
 </head>
 <body>
@@ -18,14 +20,15 @@
 	<div class="detail-box">
 		<div class="detail">
 			<div class="detail-s">
-				<div class="detail-img-big">
-					<img src="/images/erji.jpg"/>
+				<div class="zoom-img-b">
+					<img id="zoom-img" src="//img12.static.yhbimg.com/goodsimg/2014/07/11/05/02361bb67f41cd71048bb784075517998c.jpg?imageMogr2/thumbnail/420x560/background/d2hpdGU=/position/center/quality/80" data-zoom-image="//img12.static.yhbimg.com/goodsimg/2014/07/11/05/02361bb67f41cd71048bb784075517998c.jpg?imageMogr2/thumbnail/750x1000/background/d2hpdGU=/position/center/quality/80" />
 				</div>
+				
 				<div class="detail-img-s">
 					<img src="/images/erji-s.jpg"/>
 				</div>
 				<div class="detail-wenzi">
-					<h3>Audiopark 彩虹酷黑 手绳耳机</h3>
+					<h3></h3>
 					<div class="jiage">
 						<b>吊牌价：</b><p>¥399</p>
 						<b>促    销：</b><p>全场任意消费加5元换购YOHO!当期热刊</p>
@@ -41,10 +44,30 @@
 							<b>数    量：</b><p>-</p><span>1</span><p>+</p>
 						</div>
 					</div>
+					<p id="shopping-cart">加入购物车</p><p id="sc">收藏商品</p>
+					<div class="sjkehuduan">
+						<img src="/images/shoujikehuduan.jpg"/>
+						<p>手机客户端扫一扫购买</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+	<!--<script type="text/html" id="list_template">
+		{{each products as product}}
+		<div class="detail-s1">
+			<div class="id" style="display:none">{{product.id}}</div>		
+			<img src="{{product.src}}" style="display:block" class="detail-img"/>
+			<div class="detail-img-s">{{product.detail-img-s}}</div>
+			<div class="h3">{{product.h3}}</div>
+			<div class="jiage">¥{{product.jiage}}</div>
+			<div class="color">{{product.color}}</div>
+			<div class="add">加入购物车</div>
+		
+		</div>
+			
+		{{/each}}
+	</script>-->
 
 	<div class="footer"></div>
 </body>

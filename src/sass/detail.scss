@@ -24,12 +24,20 @@
             height:573px;
             margin-left: 50px;
 //          background: red;
-            .detail-img-big{
+//          .detail-img-big{
+//              width: 420px;
+//              height: 560px;
+//              float: left;
+////              background: yellow;
+//          }
+            .zoom-img-b{
                 width: 420px;
                 height: 560px;
                 float: left;
-//              background: yellow;
-            }
+                #zoom-img{
+                float: left;
+                }
+             }
             .detail-img-s{
                 width: 78px;
                 height: 101px;
@@ -74,8 +82,107 @@
                     border-top: none;
                     border-right: none;
                     border-left: none;
+                    overflow: hidden;
                     .yanse{
-                        
+                        width: 578px;
+                        height: 43px;
+                        margin-top: 10px;
+                        b{
+                            float: left;
+                            line-height: 43px;
+                        }
+                        p{
+                            float: left;
+                            width: 70px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                            border: 1px solid;
+                            margin-left: 10px;
+                        }
+                    }
+                    .chima{
+                        width: 578px;
+                        height: 43px;
+                        margin-top: 10px;
+                        b{
+                            float: left;
+                            line-height: 43px;
+                        }
+                        p{
+                            width: 35px;
+                            height: 25px;
+                            border: 1px solid;
+                            line-height: 25px;
+                            margin-top: 8px;
+                            background: black;
+                            color: white;
+                            text-align: center;
+                            float: left;
+                        }
+                    }
+                    .shuliang{
+                        margin-top: 10px;
+                        width: 578px;
+                        height: 35px;
+                        b{
+                            float: left;
+                            line-height: 35px;
+                        }
+                        p{
+                            float: left;
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid #b0b0b0;
+                            line-height: 30px;
+                            text-align: center;
+                            background: #e0e0e0;
+                        }
+                        span{
+                            display: block;
+                            width: 52px;
+                            height: 28px;
+                            border: 1px solid;
+                            float: left;
+                            line-height: 28px;
+                            text-align: center;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                #shopping-cart{
+                    width: 183px;
+                    float: left;
+                    height: 47px;
+                    background: red;
+//                  background: url(/images/shopping-cart.jpg) no-repeat center left;
+                    color: white;
+                    font-size: 15px;
+                    line-height: 47px;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                #sc{
+                    width: 144px;
+                    height: 47px;
+                    border: 1px solid #b0b0b0;
+                    line-height: 47px;
+                    text-align: center;
+                    float: left;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                }
+                .sjkehuduan{
+                    width: 87px;
+                    height: 87px;
+                    border: 1px solid #dfdfdf;
+                    clear: both;
+                    margin-top: 5px;
+                    p{
+                        font-size: 15px;
+                        font-weight: 900;
                     }
                 }
             }

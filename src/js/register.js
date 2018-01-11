@@ -1,5 +1,5 @@
 require(["config"], function(){
-	require(["jquery","load","cookie"], function(){
+	require(["jquery","cookie","load"], function($,cookie){
 		//密码提示
 		$(".in #psw").click(function info(){
 			$(".in #info").css({
@@ -84,16 +84,26 @@ require(["config"], function(){
 		})
 		
 		//表单提交事件
-		$("form").submit(function(){
-			var _usertel = $(".user #tele").val(),
-				_password = $(".in #psw").val();
-			if($(".duanxin #valid").html() === "验证成功"){
-				//保存cookie
-				$.cookie("_usertel", _password, { expires: 7, path: '/' });
-				console.log($.cookie("_usertel"))
-			}else{
-				return false;
-			}	
+		$("form").submit(function(e){
+			$.cookie.json = true;
+			e.preventDefault()?e.preventDefault():e.returnValue = false;
+			var _usertel = $("#tele").val(),
+			_password = $("#psw").val();
+			var strURL = `http://10.7.187.111/cici/register.php?name=${_usertel}&password=${_password}`;
+			$.ajax({
+				url: strURL,
+				type: "GET",
+				dataType:"json",
+				success:function(data){
+					$.cookie("_usertel",_usertel, { path: '/' } );
+					//console.log("register正确....")
+					location.href="/html/login.html";
+					//console.log($.cookie("_usertel"))
+				},
+				error:function(msg){
+           			console.log("login错误")       
+				}
+			})
 		})
 	});
 });
